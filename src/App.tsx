@@ -19,7 +19,7 @@ function App() {
           Learn React
         <LikeButtonTwo/>
           Learn React
-        <LikeButtonTwo/>
+        <LikeButtonThree/>
           Learn React
         <LikeButtonThree/>
       </header>
