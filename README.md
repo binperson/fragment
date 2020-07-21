@@ -14,3 +14,12 @@ componentWillUnmount () {
 	document.removeEventListener('keypress', callback)
 }
 ```
+
+```js
+componentDidMount() {
+	document.addEventListener('click', this.updateMouse)
+}
+componentWillUnmount () {
+	document.removeEventListener('click', this.updateMouse)
+}
+```

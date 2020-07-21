@@ -3,7 +3,7 @@ const LikeButton: React.FC = () => {
 	const [like, setLike] = useState(0)
 	useEffect(() => {
 		document.title = 'a' + like
-	})
+	}, [like])
 	return (
 		<button onClick={() => {setLike(like + 1)}}>
 			{ like }👍
