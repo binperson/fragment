@@ -5,18 +5,37 @@ import LikeButtonTwo from './components/LikeButtonTwo'
 import LikeButtonThree from './components/LikeButtonThree'
 import MouseTracker from './components/MouseTracker'
 
-import useMousePosition from './hooks/useMousePosition'
+import useURLLoader from './hooks/useURLLoader'
+import withLoader from './components/withLoader'
 
 import logo from './logo.svg';
 import './App.css';
+interface IShowResult {
+  message: string
+  status: string
+}
+const DogShow:React.FC<{data: IShowResult}> = ({ data }) => {
+  return (
+    <>
+      <h2>Dog show: {data.status}</h2>
+      <img src={data.message} alt=""/>
+    </>
+  )
+}
 
 function App() {
   const [ show, setSow ] = useState(true)
-  const positions = useMousePosition()
+  const WrappedDogShow = withLoader(DogShow, 'https://dog.ceo/api/breeds/image/random')
+  const [data, loading] = useURLLoader('https://dog.ceo/api/breeds/image/random', [show])
+  const dogResult = data as IShowResult
   return (
     <div className="App">
+      {
+        loading ? <p>读取中</p>
+        : <img src={dogResult && dogResult.message} alt=""/>
+      }
+      <WrappedDogShow/>
       <header className="App-header">
-        <p>X: {positions.x}, Y : {positions.y}</p>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -29,7 +48,7 @@ function App() {
           Learn React
         <LikeButtonThree/>
           useEffect
-          <button onClick={ () => { setSow(!show)} }>Toggle Tracker</button>
+          <button onClick={ () => { setSow(!show)} }>refresh dog img</button>
         {show && <MouseTracker/>}
       </header>
     </div>
