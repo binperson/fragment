@@ -13,3 +13,5 @@
 
  - [State Hook](https://github.com/binperson/fragment/tree/feature/202007202300-react-state-hook)
  - [Effect Hook](https://github.com/binperson/fragment/tree/feature/202007212347-react-useEffect)
+ - [Custom Hook](https://github.com/binperson/fragment/tree/feature/202007222321-react-custom-hook)
+ - [HOC](https://github.com/binperson/fragment/tree/feature/202007230020-react-HOC)
