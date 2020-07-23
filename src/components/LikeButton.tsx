@@ -1,18 +1,40 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
-import useMousePosition from '../hooks/useMousePosition'
 
 const LikeButton: React.FC = () => {
 	const [like, setLike] = useState(0)
-	const positions = useMousePosition()
+	const likeRef = useRef(0)
+	const didMountRef = useRef(false)
+	const domRef = useRef<HTMLInputElement>(null)
 	useEffect(() => {
 		document.title = 'a' + like
 	}, [like])
+
+	useEffect(() => {
+		if (didMountRef.current) {
+			console.log('this is updated')
+		} else {
+			didMountRef.current = true
+		}
+	})
+	useEffect(() => {
+		if (domRef && domRef.current) {
+			domRef.current.focus()
+		}
+	})
+	function handleAlertClick() {
+		setTimeout(() => {
+			alert('you clicked on' + likeRef.current)
+		}, 3000)
+	}
 	return (
-		<button onClick={() => {setLike(like + 1)}}>
-			{ like }👍
-			<p>X: {positions.x}, Y : {positions.y}</p>
-		</button>
+		<>
+			<input type="text" ref={domRef}/>
+			<button onClick={() => {setLike(like + 1); likeRef.current++}}>
+				{ like }👍
+			</button>
+			<button onClick={handleAlertClick}>Alert</button>
+		</>
 	)
 }
 export default LikeButton
