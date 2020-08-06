@@ -18,3 +18,4 @@
  - [useRef](https://github.com/binperson/fragment/tree/feature/202007232255-react-useRef)
  - [context](https://github.com/binperson/fragment/tree/feature/202007232350-react-context) more:[01](https://github.com/binperson/fragment/tree/feature/202008060046-react-context)
  - [Class.contextType](https://github.com/binperson/fragment/tree/feature/202008062144-react-class-contextType)
+ - [lazy](https://github.com/binperson/fragment/tree/feature/202008062221-react-lazy
