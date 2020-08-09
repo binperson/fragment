@@ -40,12 +40,24 @@ int main(void)
 
         //开始画一个三角形
         glBegin(GL_TRIANGLES);
-        glColor3f(1, 0, 0); //Red
-        glVertex3f(0, 1, 1);
 
-        glVertex3f(-1, -1, 0);
+        GLfloat VertexColorArr1[] = {1.0f, 0.0f, 0.0f};
+        glColor3fv(VertexColorArr1); //Red
 
-        glVertex3f(1, -1, 0);
+        GLfloat VertexArr1[] = {0.0f, 0.0f, 0.0f};
+        glVertex3fv(VertexArr1);
+
+        GLfloat VertexColorArr2[] = {0.0f, 1.0f, 0.0f};
+        glColor3fv(VertexColorArr2);
+
+        GLfloat VertexArr2[] = {1.0f, -1.0f, 0.0f};
+        glVertex3fv(VertexArr2);
+
+        GLfloat VertexColorArr3[] = {0.0f, 0.0f, 1.0f};
+        glColor3fv(VertexColorArr3);
+
+        GLfloat VertexArr3[] = {-1.0f, -1.0f, 0.0f};
+        glVertex3fv(VertexArr3);
         //结束一个画图步骤
         glEnd();
 
