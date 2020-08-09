@@ -43,21 +43,10 @@ int main(void)
         glColor3f(1, 0, 0); //Red
         glVertex3f(0, 1, 1);
 
-        glColor3f(0, 1, 0); //Green
         glVertex3f(-1, -1, 0);
 
-        glColor3f(0, 0, 1); //Blue
         glVertex3f(1, -1, 0);
         //结束一个画图步骤
-        glEnd();
-
-        glBegin(GL_POLYGON);
-        //再画个梯形，需要注意笔顺
-        glColor3f(0.5, 0.5, 0.5); //Grey
-        glVertex2d(0.5, 0.5);
-        glVertex2d(1, 1);
-        glVertex2d(1, 0);
-        glVertex2d(0.5, 0);
         glEnd();
 
 
