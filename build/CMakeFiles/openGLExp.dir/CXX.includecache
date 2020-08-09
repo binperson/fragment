@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/maxwell/CLionProjects/openGLExp/main.cpp
+GLEW/glew.h
+-
+GLFW/glfw3.h
+-
+iostream
+-
+
