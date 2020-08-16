@@ -1,16 +1,1 @@
-#### Class
-
-```js
-componentDidMount () {
-	const { id } = this.props
-	fetch(`xxx?id=${id}`)
-	document.addEventListener('keypress', callback)
-}
-componentDidUpdate () {
-	const { id } = this.props
-	fetch(`xxx?id=${id}`)
-}
-componentWillUnmount () {
-	document.removeEventListener('keypress', callback)
-}
-```
+https://naotu.baidu.com/file/f5c0c33620e0efa912dc3ffa9ade3df6?token=8326e591aa8b05e4
