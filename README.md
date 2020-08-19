@@ -1,16 +1,15 @@
-#### Class
+# umi project
 
-```js
-componentDidMount () {
-	const { id } = this.props
-	fetch(`xxx?id=${id}`)
-	document.addEventListener('keypress', callback)
-}
-componentDidUpdate () {
-	const { id } = this.props
-	fetch(`xxx?id=${id}`)
-}
-componentWillUnmount () {
-	document.removeEventListener('keypress', callback)
-}
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ yarn
+```
+
+Start the dev server,
+
+```bash
+$ yarn start
 ```

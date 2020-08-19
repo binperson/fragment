@@ -1,1 +1,0 @@
-export { d2_f } from './d2_f.ts'
