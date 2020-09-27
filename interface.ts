@@ -32,3 +32,9 @@ let viking: Person = {
   id: 1234,
   name: 'viking',
 }
+
+interface Person {
+  name: string;
+}
+
+type Person1 = string
