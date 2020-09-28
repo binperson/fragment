@@ -1,3 +1,8 @@
+// private, protected, public 访问类型
+// public 允许我在类的内外被调用
+// private 允许在类内被使用
+// protected 允许在类内
+
 class Animal {
   name: string;
   static categoies: string[] = ['mammal', 'bird']
@@ -60,3 +65,50 @@ class Cellphone implements RadioWithBattery {
 
   }
 }
+
+class Person {
+  name = 'dell'
+  getName() {
+    return this.name;
+  }
+}
+
+class Teacher extends Person {
+  name = 'dell1'
+  getTeacherName() {
+    return 'Teacher'
+  }
+  getName() {
+    return super.getName() + this.name;
+  }
+}
+
+new Teacher().getName()
+
+class Person {
+  // 传统写法
+  // public name: string;
+  // constructor(name: string) {
+  //   this.name = name
+  // }
+  // 简化写法
+  constructor(public name: string) {
+    this.name = name
+  }
+}
+
+class Teacher extends Person {
+  constructor(public age: number) {
+    super('dell')
+  }
+}
+
+class Teacher extends Person {
+  constructor(public age: number) {
+    super('dell');
+  }
+}
+
+const teacher = new Teacher(28);
+console.log(teacher.age);
+console.log(teacher.name);
