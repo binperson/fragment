@@ -35,6 +35,29 @@ let viking: Person = {
 
 interface Person {
   name: string;
+  [propName: string]: any;
+  say(): string;
+}
+
+interface Teacher extends Person {
+  teach(): string;
+}
+
+class User implements Person {
+  name: 'dell';
+  say() {
+    return 'hello'
+  }
 }
 
 type Person1 = string
+
+
+
+interface SayHi {
+  (word: string): string
+}
+
+const say: SayHi = (word: string) => {
+  return word
+}
